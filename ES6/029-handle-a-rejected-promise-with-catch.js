@@ -1,5 +1,5 @@
 const makeServerRequest = new Promise((resolve, reject) => {
-  // responseFromServer is set to false to represent an unsuccessful response from a server
+	// responseFromServer is set to false to represent an unsuccessful response from a server
 	let responseFromServer = false;
 
 	if (responseFromServer) {
@@ -7,7 +7,8 @@ const makeServerRequest = new Promise((resolve, reject) => {
 	} else {
 		reject('Data not received');
 	}
-}).then((result) => {
+})
+	.then((result) => {
 		console.log(result);
 	})
 	.catch((error) => {
