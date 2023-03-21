@@ -12,3 +12,9 @@ Array.prototype.myMap = function (callback) {
 	// Only change code above this line
 	return newArray;
 };
+
+/* 
+arr.forEach(function callback(currentValue[, index[, array]]) {
+  //your iterator
+}[, thisArg]); 
+*/
