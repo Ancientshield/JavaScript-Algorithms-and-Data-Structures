@@ -1,23 +1,24 @@
 function sumPrimes(num) {
-    function isPrime(num) {
-    const sqrt = Math.sqrt(num);
-    for (let i = 2; i <= sqrt; i++) {
-      if (num % i === 0)
-        return false;
-    }
-    return true;
-  }
+	function isPrime(num) {
+		const sqrt = Math.sqrt(num);
+		for (let i = 2; i <= sqrt; i++) {
+			if (num % i === 0) {
+				return false;
+			}
+		}
+		return true;
+	}
 
-  let sum = 0;
-  for (let i = 2; i <= num; i++) {
-    if (isPrime(i))
-      sum += i;
-  }
-  return sum;
+	let sum = 0;
+	for (let i = 2; i <= num; i++) {
+		if (isPrime(i)) {
+			sum += i;
+		}
+	}
+	return sum;
 }
 
-sumPrimes(10);
-
+sumPrimes(100);
 
 // https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 // Eratosthenes 艾斯托拉色尼法
