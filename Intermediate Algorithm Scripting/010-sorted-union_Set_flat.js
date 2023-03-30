@@ -5,9 +5,9 @@ function uniteUnique(...arr) {
 // use arrow function:
 // const uniteUnique = (...arr) => [...new Set(arr.flat())];
 
-// Set
+// Set（自動排序並去除重複值）
 // https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Set
-// const set1 = new Set([1, 2, 3, 4, 5, 5, 5]);
+// const set1 = new Set([1, 2, 4, 3, 3, 5, 5, 5]);
 // console.log(...set1);
 // 1 2 3 4 5
 
