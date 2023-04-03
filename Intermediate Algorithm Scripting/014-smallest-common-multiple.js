@@ -8,7 +8,7 @@ function smallestCommons(arr) {
 		range.push(i);
 	}
 
-	// 將 range 陣列內所有數字的最小公倍數（Least Common Multiple, LCM）算出來
+	// 將 range 陣列內所有數字的最小公倍數（Least Common Multiple, LCM）一個一個算出來
 	let lcm = range[0];
 	for (let i = 1; i < range.length; i++) {
 		const current = range[i];
