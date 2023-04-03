@@ -1,31 +1,31 @@
 function smallestCommons(arr) {
-  // sort the array in ascending order
-  arr.sort((a, b) => a - b);
+	// 使用 Array.sort(a, b) => a-b) 將陣列由小到大排列
+	arr.sort((a, b) => a - b);
 
-  // create an array containing all the numbers in the range
-  const range = [];
-  for (let i = arr[0]; i <= arr[1]; i++) {
-    range.push(i);
-  }
+	// 新建一個陣列的參照，包含所有範圍的數字（這樣就不會改動到原陣列
+	const range = [];
+	for (let i = arr[0]; i <= arr[1]; i++) {
+		range.push(i);
+	}
 
-  // find the least common multiple (LCM) of the numbers in the range
-  let lcm = range[0];
-  for (let i = 1; i < range.length; i++) {
-    const current = range[i];
-    const gcd = calculateGCD(lcm, current);
-    lcm = (lcm * current) / gcd;
-  }
+	// 將 range 陣列內所有數字的最小公倍數（Least Common Multiple, LCM）算出來
+	let lcm = range[0];
+	for (let i = 1; i < range.length; i++) {
+		const current = range[i];
+		const gcd = calculateGCD(lcm, current);
+		lcm = (lcm * current) / gcd;
+	}
 
-  return lcm;
+	return lcm;
 }
 
-// helper function to calculate the greatest common divisor (GCD)
+// 最大公因數的公式（Greatest Common Divisor, GCD）：
 function calculateGCD(a, b) {
-  if (b === 0) {
-    return a;
-  } else {
-    return calculateGCD(b, a % b);
-  }
+	if (b === 0) {
+		return a;
+	} else {
+		return calculateGCD(b, a % b);
+	}
 }
 
-smallestCommons([1,5]);
+smallestCommons([1, 5]);
